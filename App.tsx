@@ -208,7 +208,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-x-6 gap-y-8 text-white/70 text-sm md:text-base font-heading uppercase tracking-[0.25em]">
               {[
-                { name: 'OpenAI', src: '/assets/ChatGPT-Logo.png', invert: true },
+                { name: 'OpenAI', src: '/assets/OpenAI-Logo-white-transparent.png', invert: false },
                 { name: 'Gemini', src: '/assets/Google_Gemini_logo.png' },
                 { name: 'Copilot', src: '/assets/Microsoft-Copilot-Logo-PNG.png' },
                 { name: 'Claude', src: '/assets/Claude_AI_logo..png' },
