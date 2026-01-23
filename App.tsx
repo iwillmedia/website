@@ -175,8 +175,8 @@ const App: React.FC = () => {
                 {item.title === 'WE WORK THE WAY YOU DO' && (
                   <div className="mt-6">
                     <img
-                      src="/assets/what do you want to know.jpg"
-                      alt="What do you want to know"
+                      src="/assets/office black and white.png"
+                      alt="Office in black and white"
                       className="w-full max-w-md rounded-sm border border-white/20 object-cover"
                     />
                   </div>
