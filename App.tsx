@@ -272,17 +272,20 @@ const App: React.FC = () => {
             </div>
             <div className="md:border-l md:border-white/10 md:pl-10">
               {[
-                { label: 'Direct', value: '+61 (0) 450 512 903' },
-                { label: 'Signal', value: 'will@willrogers.co' },
-                { label: 'Network', value: 'www.iwillmedia.co' },
+                { label: 'Direct', value: '+61 0 450512904', href: 'tel:+610450512904' },
+                { label: 'Signal', value: 'admin@iwillmedia.co', href: 'mailto:admin@iwillmedia.co' },
+                { label: 'Network', value: 'www.iwillmedia.co', href: 'https://www.iwillmedia.co' },
               ].map((item) => (
                 <div key={item.label} className="mb-8">
                   <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-white/40 mb-2">
                     {item.label}
                   </div>
-                  <div className="text-lg md:text-xl font-heading font-bold uppercase">
+                  <a
+                    href={item.href}
+                    className="text-lg md:text-xl font-heading font-bold uppercase text-white hover:text-white/80 transition-colors"
+                  >
                     {item.value}
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>
