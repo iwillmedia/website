@@ -193,7 +193,7 @@ const App: React.FC = () => {
                     <img
                       src={partner.src}
                       alt={`${partner.name} logo`}
-                      className={`h-12 md:h-10 w-auto object-contain ${partner.invert ? 'invert' : ''} ${partner.name === 'OpenAI' ? 'scale-110' : ''} ${partner.name === 'ElevenLabs' ? 'scale-90' : ''}`}
+                      className={`h-24 md:h-10 w-auto object-contain ${partner.invert ? 'invert' : ''} ${partner.name === 'OpenAI' ? 'scale-110' : ''} ${partner.name === 'ElevenLabs' ? 'scale-90' : ''}`}
                     />
                   ) : (
                     partner.name
