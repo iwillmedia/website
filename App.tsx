@@ -150,48 +150,56 @@ const App: React.FC = () => {
       {/* PHILOSOPHY SECTION */}
       <section id="philosophy" className="relative z-10 py-24 md:py-32 bg-black border-t border-white/10 overflow-hidden text-white">
         <div className="max-w-6xl mx-auto px-6 text-left">
-          <div className="text-5xl md:text-7xl font-heading font-bold uppercase tracking-tight text-white mb-6">ABOUT US</div>
-          <h2 className="text-2xl md:text-4xl font-heading font-bold uppercase tracking-[0.3em] leading-tight">
-            Quiet<br />Solutions.<br />Loud Results.
-          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div>
+              <div className="text-5xl md:text-7xl font-heading font-bold uppercase tracking-tight text-white mb-6">ABOUT US</div>
+              <h2 className="text-2xl md:text-4xl font-heading font-bold uppercase tracking-[0.3em] leading-tight">
+                Quiet<br />Solutions.<br />Loud Results.
+              </h2>
+            </div>
+            <div className="mt-8 md:mt-0">
+              <img
+                src="/assets/hands dirty chippy.png"
+                alt="Hands at work"
+                className="w-full max-w-md rounded-sm border border-white/20 object-cover"
+              />
+            </div>
+          </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-            {[
-              {
-                title: 'WE WORK THE WAY YOU DO',
-                desc: 'IWILLMEDIA IS BUILT FOR BUSINESSES THAT VALUE CLARITY, RELIABILITY, AND GETTING THINGS DONE. WE WORK WITH SMALL AND MEDIUM BUSINESSES BECAUSE WE ARE ONE.\n\nWE UNDERSTAND WHAT IT’S LIKE TO RUN LEAN, MAKE PRACTICAL DECISIONS, AND CHOOSE TOOLS BASED ON WHETHER THEY WORK — NOT HOW IMPRESSIVE THEY SOUND. THAT’S HOW WE APPROACH EVERYTHING WE BUILD.',
-              },
-              {
-                title: 'AI DESIGNED TO MAKE BUSINESS EASIER',
-                desc: 'EVERYTHING WE CREATE IS DESIGNED TO BE CLEAR AND DEPENDABLE. YOU’LL UNDERSTAND WHAT THE SYSTEM IS DOING, WHY IT’S DOING IT, AND HOW IT FITS INTO YOUR BUSINESS. WE AVOID BLACK-BOX AUTOMATION BECAUSE BUSINESSES NEED CONFIDENCE AND CONTROL — NOT MYSTERY.\n\nWE TAKE A PRAGMATIC APPROACH TO TECHNOLOGY. IF A PROBLEM CAN BE SOLVED WITH A SIMPLE, RELIABLE SYSTEM, THAT’S THE SYSTEM WE BUILD. WE DON’T OVERCOMPLICATE THINGS OR PUSH UNNECESSARY FEATURES. OUR FOCUS IS ON TOOLS THAT REDUCE FRICTION, SAVE TIME, AND KEEP WORKING QUIETLY IN THE BACKGROUND.\n\nMOST OF OUR CLIENTS DON’T WANT “AI TRANSFORMATION.” THEY WANT FEWER MISSED CALLS, FASTER FOLLOW-UPS, SMOOTHER WORKFLOWS, AND LESS ADMIN. THAT’S EXACTLY WHAT WE DELIVER.\n\nAT IWILLMEDIA, AI ISN’T ABOUT REPLACING PEOPLE OR CHANGING HOW YOU RUN YOUR BUSINESS. IT’S ABOUT SUPPORTING THE WAY YOU ALREADY WORK — AND MAKING IT EASIER.',
-              },
-            ].map((item) => (
-              <div key={item.title}>
-                {item.title === 'AI DESIGNED TO MAKE BUSINESS EASIER' && (
-                  <div className="mb-6 -mt-6 md:-mt-10">
-                    <img
-                      src="/assets/hands dirty chippy.png"
-                      alt="Hands at work"
-                      className="w-full max-w-md rounded-sm border border-white/20 object-cover"
-                    />
-                  </div>
-                )}
-                <div className="h-px w-44 bg-white mb-4" />
-                <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">{item.desc}</p>
-                {item.title === 'WE WORK THE WAY YOU DO' && (
-                  <div className="mt-6">
-                    <img
-                      src="/assets/office black and white.png"
-                      alt="Office in black and white"
-                      className="w-full max-w-md rounded-sm border border-white/20 object-cover"
-                    />
-                  </div>
-                )}
+            <div>
+              <div className="h-px w-44 bg-white mb-4" />
+              <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
+                WE WORK THE WAY YOU DO
+              </h3>
+              <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">
+                IWILLMEDIA IS BUILT FOR BUSINESSES THAT VALUE CLARITY, RELIABILITY, AND GETTING THINGS DONE. WE WORK WITH SMALL AND MEDIUM BUSINESSES BECAUSE WE ARE ONE.
+
+                WE UNDERSTAND WHAT IT’S LIKE TO RUN LEAN, MAKE PRACTICAL DECISIONS, AND CHOOSE TOOLS BASED ON WHETHER THEY WORK — NOT HOW IMPRESSIVE THEY SOUND. THAT’S HOW WE APPROACH EVERYTHING WE BUILD.
+              </p>
+              <div className="mt-6">
+                <img
+                  src="/assets/office black and white.png"
+                  alt="Office in black and white"
+                  className="w-full max-w-md rounded-sm border border-white/20 object-cover"
+                />
               </div>
-            ))}
+            </div>
+            <div>
+              <div className="h-px w-44 bg-white mb-4" />
+              <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
+                AI DESIGNED TO MAKE BUSINESS EASIER
+              </h3>
+              <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">
+                EVERYTHING WE CREATE IS DESIGNED TO BE CLEAR AND DEPENDABLE. YOU’LL UNDERSTAND WHAT THE SYSTEM IS DOING, WHY IT’S DOING IT, AND HOW IT FITS INTO YOUR BUSINESS. WE AVOID BLACK-BOX AUTOMATION BECAUSE BUSINESSES NEED CONFIDENCE AND CONTROL — NOT MYSTERY.
+
+                WE TAKE A PRAGMATIC APPROACH TO TECHNOLOGY. IF A PROBLEM CAN BE SOLVED WITH A SIMPLE, RELIABLE SYSTEM, THAT’S THE SYSTEM WE BUILD. WE DON’T OVERCOMPLICATE THINGS OR PUSH UNNECESSARY FEATURES. OUR FOCUS IS ON TOOLS THAT REDUCE FRICTION, SAVE TIME, AND KEEP WORKING QUIETLY IN THE BACKGROUND.
+
+                MOST OF OUR CLIENTS DON’T WANT “AI TRANSFORMATION.” THEY WANT FEWER MISSED CALLS, FASTER FOLLOW-UPS, SMOOTHER WORKFLOWS, AND LESS ADMIN. THAT’S EXACTLY WHAT WE DELIVER.
+
+                AT IWILLMEDIA, AI ISN’T ABOUT REPLACING PEOPLE OR CHANGING HOW YOU RUN YOUR BUSINESS. IT’S ABOUT SUPPORTING THE WAY YOU ALREADY WORK — AND MAKING IT EASIER.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 border-t border-white/10 pt-8">
