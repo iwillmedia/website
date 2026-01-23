@@ -167,10 +167,6 @@ const App: React.FC = () => {
               },
             ].map((item) => (
               <div key={item.title}>
-                <div className="h-px w-44 bg-white mb-4" />
-                <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
-                  {item.title}
-                </h3>
                 {item.title === 'AI DESIGNED TO MAKE BUSINESS EASIER' && (
                   <div className="mb-6">
                     <img
@@ -180,6 +176,10 @@ const App: React.FC = () => {
                     />
                   </div>
                 )}
+                <div className="h-px w-44 bg-white mb-4" />
+                <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
+                  {item.title}
+                </h3>
                 <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">{item.desc}</p>
                 {item.title === 'WE WORK THE WAY YOU DO' && (
                   <div className="mt-6">
