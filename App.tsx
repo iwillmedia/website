@@ -172,6 +172,15 @@ const App: React.FC = () => {
                   {item.title}
                 </h3>
                 <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">{item.desc}</p>
+                {item.title === 'WE WORK THE WAY YOU DO' && (
+                  <div className="mt-6">
+                    <img
+                      src="/assets/what do you want to know.jpg"
+                      alt="What do you want to know"
+                      className="w-full max-w-md rounded-sm border border-white/20 object-cover"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
