@@ -33,6 +33,16 @@
       .font-mono {
         font-family: 'Syncopate', sans-serif;
       }
+      /* Ensure injected chat widget stays clickable on mobile */
+      iframe[src*="leadconnectorhq.com"],
+      iframe[src*="leadconnector"],
+      #leadconnector-chat-widget,
+      .lc-chat-widget,
+      .hl-chat-widget {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        touch-action: manipulation !important;
+      }
     </style>
   <script type="importmap">
 {
