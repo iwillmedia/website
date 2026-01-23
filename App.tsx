@@ -171,6 +171,15 @@ const App: React.FC = () => {
                 <h3 className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white mb-3">
                   {item.title}
                 </h3>
+                {item.title === 'AI DESIGNED TO MAKE BUSINESS EASIER' && (
+                  <div className="mb-6">
+                    <img
+                      src="/assets/hands dirty chippy.png"
+                      alt="Hands at work"
+                      className="w-full max-w-md rounded-sm border border-white/20 object-cover"
+                    />
+                  </div>
+                )}
                 <p className="text-sm uppercase text-white/60 leading-relaxed whitespace-pre-line">{item.desc}</p>
                 {item.title === 'WE WORK THE WAY YOU DO' && (
                   <div className="mt-6">
