@@ -180,7 +180,7 @@ const App: React.FC = () => {
             <div className="text-lg md:text-2xl font-heading font-bold uppercase tracking-[0.2em] text-white mb-6">
               Our AI Partners
             </div>
-            <div className="flex flex-nowrap items-center justify-between gap-4 md:gap-6 text-white/70 text-sm md:text-base font-heading uppercase tracking-[0.25em]">
+            <div className="flex items-center justify-center gap-6 h-20 md:h-auto text-white/70 text-sm md:text-base font-heading uppercase tracking-[0.25em]">
               {[
                 { name: 'OpenAI', src: '/assets/ChatGPT-Logo.png', invert: true },
                 { name: 'Gemini', src: '/assets/Google_Gemini_logo.png' },
