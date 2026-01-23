@@ -168,7 +168,7 @@ const App: React.FC = () => {
             ].map((item) => (
               <div key={item.title}>
                 {item.title === 'AI DESIGNED TO MAKE BUSINESS EASIER' && (
-                  <div className="mb-6">
+                  <div className="mb-6 -mt-6 md:-mt-10">
                     <img
                       src="/assets/hands dirty chippy.png"
                       alt="Hands at work"
