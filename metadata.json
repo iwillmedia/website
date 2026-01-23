@@ -1,0 +1,7 @@
+{
+  "name": "iwillmedia",
+  "description": "Calm, practical tools and media for navigating complex systems: money, tech, integrity, and AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
