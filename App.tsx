@@ -208,18 +208,18 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-x-6 gap-y-8 text-white/70 text-sm md:text-base font-heading uppercase tracking-[0.25em]">
               {[
-                { name: 'OpenAI', src: '/assets/OpenAI-Logo-white-transparent.png', invert: false },
+                { name: 'OpenAI', src: '/assets/OpenAI-Logo-white-transparent.png' },
                 { name: 'Gemini', src: '/assets/Google_Gemini_logo.png' },
                 { name: 'Copilot', src: '/assets/Microsoft-Copilot-Logo-PNG.png' },
                 { name: 'Claude', src: '/assets/Claude_AI_logo..png' },
-                { name: 'ElevenLabs', src: '/assets/elevenlabs-logo-black.png', invert: true },
+                { name: 'ElevenLabs', src: '/assets/elevenlabs-logo-black.png' },
               ].map((partner) => (
                 <div key={partner.name} className="px-4 py-3 text-center">
                   {partner.src ? (
                     <img
                       src={partner.src}
                       alt={`${partner.name} logo`}
-                      className={`h-14 sm:h-16 md:h-12 w-auto object-contain ${partner.invert ? 'invert' : ''} ${partner.name === 'Claude' ? 'brightness-150' : ''} ${partner.name === 'Copilot' ? 'brightness-150' : ''}`}
+                      className="h-14 sm:h-16 md:h-12 w-auto object-contain"
                     />
                   ) : (
                     partner.name
