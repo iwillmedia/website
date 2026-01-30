@@ -277,7 +277,7 @@ const App: React.FC = () => {
             </div>
             <div className="md:border-l md:border-white/10 md:pl-10">
               {[
-                { label: 'Direct', value: '+61 0 450512904', href: 'tel:+610450512904' },
+                { label: 'Direct', value: '+61 8 7943 6159', href: 'tel:+61879436159' },
                 { label: 'Signal', value: 'admin@iwillmedia.co', href: 'mailto:admin@iwillmedia.co' },
                 { label: 'Network', value: 'www.iwillmedia.co', href: 'https://www.iwillmedia.co' },
               ].map((item) => (
