@@ -21,17 +21,16 @@
         justify-content: center;
         background: #0b0b0b;
         color: #f5f5f5;
-        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-family: "Arial", system-ui, sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        text-align: center;
+        letter-spacing: 0.08em;
       }
 
       .backdrop {
         position: fixed;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
           url("/assets/what%20do%20you%20want%20to%20know.jpg") center / cover no-repeat;
         filter: grayscale(1);
       }
@@ -39,20 +38,16 @@
       .frame {
         position: relative;
         z-index: 1;
-        padding: 6vh 6vw;
+        width: min(960px, 92vw);
+        padding: clamp(24px, 6vw, 64px);
         border: 1px solid rgba(255, 255, 255, 0.25);
-        background: rgba(0, 0, 0, 0.55);
+        background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(6px);
       }
 
-      .lockup {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
       .brand {
-        font-size: clamp(2.6rem, 8vw, 7rem);
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: clamp(2.2rem, 6vw, 5rem);
         line-height: 0.9;
         letter-spacing: 0.08em;
       }
@@ -66,41 +61,130 @@
       }
 
       .title {
-        font-size: clamp(0.85rem, 2.4vw, 1.2rem);
-        font-family: "Arial", system-ui, sans-serif;
+        margin-top: 16px;
+        font-size: clamp(0.9rem, 2.6vw, 1.3rem);
+        font-weight: 600;
         letter-spacing: 0.4em;
         color: rgba(245, 245, 245, 0.7);
       }
 
-      .link {
-        display: inline-block;
-        margin-top: 2rem;
+      .lead {
+        margin: 20px 0 28px;
+        font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+        line-height: 1.8;
+        color: rgba(245, 245, 245, 0.7);
+        max-width: 58ch;
+      }
+
+      .faq {
+        display: grid;
+        gap: 18px;
+      }
+
+      .item {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 14px 18px;
+        background: rgba(0, 0, 0, 0.35);
+      }
+
+      .q {
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.22em;
+      }
+
+      .a {
+        margin-top: 8px;
+        font-size: 0.7rem;
+        line-height: 1.8;
+        color: rgba(245, 245, 245, 0.75);
+      }
+
+      .cta {
+        margin-top: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
         font-size: 0.7rem;
         letter-spacing: 0.35em;
-        color: rgba(245, 245, 245, 0.7);
         text-decoration: none;
+        color: rgba(245, 245, 245, 0.8);
         border: 1px solid rgba(245, 245, 245, 0.35);
-        padding: 0.8rem 1.5rem;
+        padding: 0.9rem 1.6rem;
         transition: 0.2s ease;
       }
 
-      .link:hover {
+      .cta:hover {
         color: #ffffff;
         border-color: #ffffff;
+      }
+
+      .footer {
+        margin-top: 18px;
+        font-size: 0.6rem;
+        letter-spacing: 0.35em;
+        color: rgba(245, 245, 245, 0.45);
+      }
+
+      .footer a {
+        color: inherit;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
-    <div class="frame">
-      <div class="lockup">
-        <div class="brand">
-          IWILL<br />
-          <span>MEDIA</span>
-        </div>
-        <div class="title">Help Center &amp; FAQs</div>
+    <main class="frame">
+      <div class="brand">
+        IWILL<br />
+        <span>MEDIA</span>
       </div>
-      <a class="link" href="/">Back to Home</a>
-    </div>
+      <div class="title">Help Center &amp; FAQs</div>
+      <p class="lead">
+        Built for SMBs, trades, and agencies. We focus on AI agents, chat bots,
+        and automation that save time, win leads, and keep your team moving.
+      </p>
+
+      <section class="faq" aria-label="Frequently asked questions">
+        <div class="item">
+          <div class="q">What do you build?</div>
+          <div class="a">AI agents, chat bots, and automations tailored to your workflows.</div>
+        </div>
+        <div class="item">
+          <div class="q">How fast can we launch?</div>
+          <div class="a">Most MVP builds launch in 2–4 weeks depending on scope.</div>
+        </div>
+        <div class="item">
+          <div class="q">What do you need from us?</div>
+          <div class="a">Access to systems, a clear goal, and a point of contact for approvals.</div>
+        </div>
+        <div class="item">
+          <div class="q">Do you work with trades and agencies?</div>
+          <div class="a">Yes. We specialize in SMBs, trades, and agency workflows.</div>
+        </div>
+        <div class="item">
+          <div class="q">Can you integrate with our tools?</div>
+          <div class="a">Yes. We connect CRMs, inboxes, calendars, and internal systems.</div>
+        </div>
+        <div class="item">
+          <div class="q">What’s the pricing approach?</div>
+          <div class="a">Fixed project scope or monthly support. We’ll recommend the best fit.</div>
+        </div>
+        <div class="item">
+          <div class="q">Do you provide ongoing support?</div>
+          <div class="a">Yes. We monitor, optimize, and iterate after launch if needed.</div>
+        </div>
+        <div class="item">
+          <div class="q">How do we get help?</div>
+          <div class="a">Submit the help form and we’ll respond with next steps.</div>
+        </div>
+      </section>
+
+      <a class="cta" href="/#contact" aria-label="Open contact form">Open Help Form</a>
+      <div class="footer">
+        <a href="/">Back to Home</a>
+      </div>
+    </main>
   </body>
 </html>
