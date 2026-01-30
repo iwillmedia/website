@@ -21,17 +21,16 @@
         justify-content: center;
         background: #0b0b0b;
         color: #f5f5f5;
-        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-family: "Arial", system-ui, sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        text-align: center;
+        letter-spacing: 0.08em;
       }
 
       .backdrop {
         position: fixed;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
           url("/assets/office%20black%20and%20white.png") center / cover no-repeat;
         filter: grayscale(1);
       }
@@ -39,20 +38,16 @@
       .frame {
         position: relative;
         z-index: 1;
-        padding: 6vh 6vw;
+        width: min(1000px, 92vw);
+        padding: clamp(24px, 6vw, 64px);
         border: 1px solid rgba(255, 255, 255, 0.25);
-        background: rgba(0, 0, 0, 0.55);
+        background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(6px);
       }
 
-      .lockup {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
       .brand {
-        font-size: clamp(2.6rem, 8vw, 7rem);
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: clamp(2.2rem, 6vw, 5rem);
         line-height: 0.9;
         letter-spacing: 0.08em;
       }
@@ -66,41 +61,199 @@
       }
 
       .title {
-        font-size: clamp(0.9rem, 2.6vw, 1.4rem);
-        font-family: "Arial", system-ui, sans-serif;
+        margin-top: 16px;
+        font-size: clamp(0.9rem, 2.6vw, 1.3rem);
+        font-weight: 600;
         letter-spacing: 0.4em;
         color: rgba(245, 245, 245, 0.7);
       }
 
-      .link {
-        display: inline-block;
-        margin-top: 2rem;
+      .meta {
+        margin-top: 10px;
         font-size: 0.7rem;
         letter-spacing: 0.35em;
-        color: rgba(245, 245, 245, 0.7);
+        color: rgba(245, 245, 245, 0.55);
+      }
+
+      .copy {
+        margin-top: 24px;
+        display: grid;
+        gap: 16px;
+        font-size: 0.68rem;
+        line-height: 1.9;
+        letter-spacing: 0.18em;
+        color: rgba(245, 245, 245, 0.78);
+      }
+
+      .block {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 14px 18px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .heading {
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.28em;
+        margin-bottom: 6px;
+      }
+
+      .list {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      .list li {
+        margin: 4px 0;
+      }
+
+      .cta {
+        margin-top: 26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-size: 0.7rem;
+        letter-spacing: 0.35em;
         text-decoration: none;
+        color: rgba(245, 245, 245, 0.8);
         border: 1px solid rgba(245, 245, 245, 0.35);
-        padding: 0.8rem 1.5rem;
+        padding: 0.9rem 1.6rem;
         transition: 0.2s ease;
       }
 
-      .link:hover {
+      .cta:hover {
         color: #ffffff;
         border-color: #ffffff;
+      }
+
+      .footer {
+        margin-top: 16px;
+        font-size: 0.6rem;
+        letter-spacing: 0.35em;
+        color: rgba(245, 245, 245, 0.45);
+      }
+
+      .footer a {
+        color: inherit;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
-    <div class="frame">
-      <div class="lockup">
-        <div class="brand">
-          IWILL<br />
-          <span>MEDIA</span>
-        </div>
-        <div class="title">Terms &amp; Conditions</div>
+    <main class="frame">
+      <div class="brand">
+        IWILL<br />
+        <span>MEDIA</span>
       </div>
-      <a class="link" href="/">Back to Home</a>
-    </div>
+      <div class="title">Terms &amp; Conditions</div>
+      <div class="meta">Last updated: January 30, 2026</div>
+
+      <div class="copy">
+        <div class="block">
+          These Terms &amp; Conditions apply to all services provided by IWILL MEDIA, including
+          AI voice agents, AI chatbots, automation tools, trial services, and ongoing subscriptions.
+        </div>
+
+        <div class="block">
+          <div class="heading">1. About Our Services</div>
+          IWILL MEDIA provides AI-powered tools and services designed to assist businesses with handling enquiries,
+          capturing contact details, and automating routine interactions.
+          <ul class="list">
+            <li>AI Voice Receptionists</li>
+            <li>AI Chatbots</li>
+            <li>AI Agents</li>
+            <li>Automation and workflow services</li>
+            <li>Trial, test, or pilot services</li>
+            <li>Ongoing subscription services</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="heading">2. Trial &amp; Test Services (Including 14-Day Trials)</div>
+          Where a service is offered as a trial or test period, it is provided on a limited, evaluation-only basis.
+          During a trial period, services are generally limited to:
+          <ul class="list">
+            <li>Answering calls or messages</li>
+            <li>Capturing caller or user contact details</li>
+            <li>Recording the caller’s or user’s issue or request</li>
+            <li>Forwarding captured information to the Client or nominated contact</li>
+          </ul>
+          Trial services do not include full customer service, sales, advice, bookings, or complex support unless expressly agreed in writing.
+        </div>
+
+        <div class="block">
+          <div class="heading">3. Client Responsibilities</div>
+          The Client agrees to provide accurate setup information, a monitored contact method, and timely responses to captured enquiries.
+          I WILL MEDIA is not responsible for delays or outcomes caused by inaccurate, incomplete, or late information supplied by the Client.
+        </div>
+
+        <div class="block">
+          <div class="heading">4. Service Availability &amp; Completion</div>
+          A trial or test service is considered complete at the end of the stated trial period, regardless of call volume, enquiry volume, or usage.
+          Service availability may be affected by third-party platforms, telecommunications providers, internet connectivity, or systems outside the control of I WILL MEDIA.
+        </div>
+
+        <div class="block">
+          <div class="heading">5. No Performance Guarantees</div>
+          Our services are provided on a best-effort basis. To the extent permitted by law, I WILL MEDIA does not guarantee call or message volumes,
+          lead quality, conversion rates, revenue or business outcomes, or continuous or uninterrupted service.
+        </div>
+
+        <div class="block">
+          <div class="heading">6. Fees &amp; Payments</div>
+          Trial and setup fees are one-off and non-refundable, except where required under Australian Consumer Law. Subscription fees (where applicable)
+          are billed separately. No recurring charges apply unless the Client explicitly agrees to continue beyond a trial or test period.
+          Failure to pay applicable fees may result in suspension or termination of services.
+        </div>
+
+        <div class="block">
+          <div class="heading">7. Transition to Ongoing Services</div>
+          If the Client chooses to continue using a service after a trial period, a separate subscription or ongoing service agreement will apply.
+          If the Client does not proceed, the service will be discontinued at the end of the trial period without further obligation.
+        </div>
+
+        <div class="block">
+          <div class="heading">8. Ownership &amp; Intellectual Property</div>
+          All AI configurations, workflows, prompts, system designs, and supporting materials remain the intellectual property of I WILL MEDIA.
+          The Client is granted a limited, non-exclusive, non-transferable right to use the services while the service is active and payments are up to date.
+        </div>
+
+        <div class="block">
+          <div class="heading">9. Limitation of Liability</div>
+          To the maximum extent permitted by law, I WILL MEDIA is not liable for indirect or consequential loss, loss of profits, revenue, or business opportunity,
+          missed calls, messages, or enquiries, or delays or interruptions caused by third-party systems.
+          Nothing in these Terms excludes, restricts, or modifies any rights or remedies the Client may have under Australian Consumer Law.
+        </div>
+
+        <div class="block">
+          <div class="heading">10. Australian Consumer Law Notice</div>
+          Our services come with guarantees that cannot be excluded under the Australian Consumer Law. You are entitled to a replacement or refund for a major failure,
+          and compensation for any other reasonably foreseeable loss or damage. Nothing in these Terms limits your rights under the Australian Consumer Law.
+        </div>
+
+        <div class="block">
+          <div class="heading">11. Suspension &amp; Termination</div>
+          I WILL MEDIA may suspend or terminate services if these Terms are breached, services are misused or used unlawfully, or required payments are not made.
+        </div>
+
+        <div class="block">
+          <div class="heading">12. Changes to Services or Terms</div>
+          We may update our services or these Terms from time to time. The latest version will be published on our website.
+          Continued use of our services constitutes acceptance of the updated Terms.
+        </div>
+
+        <div class="block">
+          <div class="heading">13. Acceptance</div>
+          By using any I WILL MEDIA service — including payment of trial, setup, or subscription fees — the Client acknowledges they have read and agree to these Terms &amp; Conditions as of January 30, 2026.
+        </div>
+      </div>
+
+      <a class="cta" href="/" aria-label="Back to home">Back to Home</a>
+      <div class="footer">
+        <a href="/">IWILL MEDIA</a>
+      </div>
+    </main>
   </body>
 </html>
