@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IWILL MEDIA — Terms &amp; Conditions</title>
+    <style>
+      :root {
+        color-scheme: only light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0b0b0b;
+        color: #f5f5f5;
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        text-align: center;
+      }
+
+      .backdrop {
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+          url("/assets/office%20black%20and%20white.png") center / cover no-repeat;
+        filter: grayscale(1);
+      }
+
+      .frame {
+        position: relative;
+        z-index: 1;
+        padding: 6vh 6vw;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(6px);
+      }
+
+      .lockup {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: clamp(2.6rem, 8vw, 7rem);
+        line-height: 0.9;
+        letter-spacing: 0.08em;
+      }
+
+      .brand span {
+        display: inline-block;
+        padding: 0.12em 0.3em;
+        background: #f5f5f5;
+        color: #0b0b0b;
+        margin-top: 0.18em;
+      }
+
+      .title {
+        font-size: clamp(0.9rem, 2.6vw, 1.4rem);
+        font-family: "Arial", system-ui, sans-serif;
+        letter-spacing: 0.4em;
+        color: rgba(245, 245, 245, 0.7);
+      }
+
+      .link {
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.35em;
+        color: rgba(245, 245, 245, 0.7);
+        text-decoration: none;
+        border: 1px solid rgba(245, 245, 245, 0.35);
+        padding: 0.8rem 1.5rem;
+        transition: 0.2s ease;
+      }
+
+      .link:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="frame">
+      <div class="lockup">
+        <div class="brand">
+          IWILL<br />
+          <span>MEDIA</span>
+        </div>
+        <div class="title">Terms &amp; Conditions</div>
+      </div>
+      <a class="link" href="/">Back to Home</a>
+    </div>
+  </body>
+</html>
