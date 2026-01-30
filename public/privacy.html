@@ -21,17 +21,16 @@
         justify-content: center;
         background: #0b0b0b;
         color: #f5f5f5;
-        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-family: "Arial", system-ui, sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        text-align: center;
+        letter-spacing: 0.08em;
       }
 
       .backdrop {
         position: fixed;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
           url("/assets/hands%20dirty%20chippy.png") center / cover no-repeat;
         filter: grayscale(1);
       }
@@ -39,20 +38,16 @@
       .frame {
         position: relative;
         z-index: 1;
-        padding: 6vh 6vw;
+        width: min(1000px, 92vw);
+        padding: clamp(24px, 6vw, 64px);
         border: 1px solid rgba(255, 255, 255, 0.25);
-        background: rgba(0, 0, 0, 0.55);
+        background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(6px);
       }
 
-      .lockup {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
       .brand {
-        font-size: clamp(2.6rem, 8vw, 7rem);
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: clamp(2.2rem, 6vw, 5rem);
         line-height: 0.9;
         letter-spacing: 0.08em;
       }
@@ -66,41 +61,171 @@
       }
 
       .title {
-        font-size: clamp(0.9rem, 2.6vw, 1.4rem);
-        font-family: "Arial", system-ui, sans-serif;
+        margin-top: 16px;
+        font-size: clamp(0.9rem, 2.6vw, 1.3rem);
+        font-weight: 600;
         letter-spacing: 0.4em;
         color: rgba(245, 245, 245, 0.7);
       }
 
-      .link {
-        display: inline-block;
-        margin-top: 2rem;
+      .meta {
+        margin-top: 10px;
         font-size: 0.7rem;
         letter-spacing: 0.35em;
-        color: rgba(245, 245, 245, 0.7);
+        color: rgba(245, 245, 245, 0.55);
+      }
+
+      .copy {
+        margin-top: 24px;
+        display: grid;
+        gap: 16px;
+        font-size: 0.68rem;
+        line-height: 1.9;
+        letter-spacing: 0.18em;
+        color: rgba(245, 245, 245, 0.78);
+      }
+
+      .block {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 14px 18px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .heading {
+        font-family: "Arial Black", "Impact", system-ui, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.28em;
+        margin-bottom: 6px;
+      }
+
+      .list {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      .list li {
+        margin: 4px 0;
+      }
+
+      .cta {
+        margin-top: 26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-size: 0.7rem;
+        letter-spacing: 0.35em;
         text-decoration: none;
+        color: rgba(245, 245, 245, 0.8);
         border: 1px solid rgba(245, 245, 245, 0.35);
-        padding: 0.8rem 1.5rem;
+        padding: 0.9rem 1.6rem;
         transition: 0.2s ease;
       }
 
-      .link:hover {
+      .cta:hover {
         color: #ffffff;
         border-color: #ffffff;
+      }
+
+      .footer {
+        margin-top: 16px;
+        font-size: 0.6rem;
+        letter-spacing: 0.35em;
+        color: rgba(245, 245, 245, 0.45);
+      }
+
+      .footer a {
+        color: inherit;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
-    <div class="frame">
-      <div class="lockup">
-        <div class="brand">
-          IWILL<br />
-          <span>MEDIA</span>
-        </div>
-        <div class="title">Privacy Policy</div>
+    <main class="frame">
+      <div class="brand">
+        IWILL<br />
+        <span>MEDIA</span>
       </div>
-      <a class="link" href="/">Back to Home</a>
-    </div>
+      <div class="title">Privacy Policy</div>
+      <div class="meta">Last updated: January 30, 2026</div>
+
+      <div class="copy">
+        <div class="block">
+          This Privacy Policy explains how IWILL MEDIA collects, uses, stores, and protects information when you use
+          our AI agents, chat bots, automation services, and related websites.
+        </div>
+
+        <div class="block">
+          <div class="heading">1. Information We Collect</div>
+          We may collect personal and business information you provide directly, including names, phone numbers, email addresses,
+          company details, and service requirements. Our systems may also capture enquiry content, call metadata, chat transcripts,
+          and system usage data to deliver and improve services.
+        </div>
+
+        <div class="block">
+          <div class="heading">2. How We Use Information</div>
+          We use collected information to set up, operate, and support AI agents and automations, respond to enquiries, improve performance,
+          provide reporting, and meet contractual and legal obligations.
+        </div>
+
+        <div class="block">
+          <div class="heading">3. Subcontractors &amp; Suppliers</div>
+          We may use subcontractors, cloud providers, telecommunications partners, or other suppliers to deliver our services.
+          These providers may process information on our behalf under appropriate confidentiality and security obligations.
+        </div>
+
+        <div class="block">
+          <div class="heading">4. Sharing &amp; Disclosure</div>
+          We do not sell personal information. We may share information with approved service providers, or where required by law,
+          regulatory request, or to protect our rights and clients.
+        </div>
+
+        <div class="block">
+          <div class="heading">5. Data Security</div>
+          We take reasonable steps to secure information using administrative, technical, and physical safeguards.
+          No system is completely secure, and we cannot guarantee absolute security.
+        </div>
+
+        <div class="block">
+          <div class="heading">6. Data Retention</div>
+          We retain information only as long as necessary for service delivery, compliance, or legitimate business purposes.
+          Data may be deleted or anonymized after service completion, unless retention is required by law or agreement.
+        </div>
+
+        <div class="block">
+          <div class="heading">7. Cookies &amp; Analytics</div>
+          Our website may use cookies and analytics tools to understand traffic, improve performance, and measure marketing effectiveness.
+          You can control cookies through your browser settings.
+        </div>
+
+        <div class="block">
+          <div class="heading">8. Access &amp; Correction</div>
+          You may request access to, or correction of, the personal information we hold about you.
+          Contact us to make a request.
+        </div>
+
+        <div class="block">
+          <div class="heading">9. International Transfers</div>
+          Some service providers may store or process data outside Australia. We take reasonable steps to ensure appropriate safeguards
+          are in place.
+        </div>
+
+        <div class="block">
+          <div class="heading">10. Changes to This Policy</div>
+          We may update this Privacy Policy from time to time. The latest version will be published on our website.
+        </div>
+
+        <div class="block">
+          <div class="heading">11. Contact Us</div>
+          For privacy questions or requests, contact IWILL MEDIA via the website contact form.
+        </div>
+      </div>
+
+      <a class="cta" href="/" aria-label="Back to home">Back to Home</a>
+      <div class="footer">
+        <a href="/">IWILL MEDIA</a>
+      </div>
+    </main>
   </body>
 </html>
