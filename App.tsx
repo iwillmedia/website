@@ -308,6 +308,7 @@ const App: React.FC = () => {
               { label: 'Facebook', href: 'https://www.facebook.com/iwillmedia.co/' },
               { label: 'Terms & Conditions', href: '/terms.html' },
               { label: 'Privacy Policy', href: '/privacy.html' },
+              { label: 'Help Center & FAQs', href: '/help.html' },
             ].map((item) => (
               <a
                 key={item.label}
