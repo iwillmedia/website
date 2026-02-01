@@ -303,7 +303,7 @@ const App: React.FC = () => {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             {[
               { label: 'LinkedIn', href: 'https://www.linkedin.com/in/iwillmediaco/' },
-              { label: 'Instagram', href: '#' },
+              { label: 'Instagram', href: 'https://www.instagram.com/iwillmediaco/' },
               { label: 'X', href: '#' },
               { label: 'Facebook', href: 'https://www.facebook.com/iwillmedia.co/' },
               { label: 'Terms & Conditions', href: '/terms.html' },
