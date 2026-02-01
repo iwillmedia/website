@@ -219,7 +219,7 @@ const App: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
-              { label: '', title: 'AI AGENTS', sub: 'LOGIC SYSTEMS', icon: Users, offset: '-mt-2', desc: 'Placeholder text.' },
+              { label: '', title: 'AI AGENTS', sub: 'LOGIC SYSTEMS', icon: Users, offset: '-mt-2', desc: 'AI Agents are autonomous digital workers designed to handle multi-step tasks without constant supervision. Unlike simple bots, agents can reason, make decisions, and take action across systems based on rules and context. We deploy AI agents to manage workflows such as lead qualification, case routing, document handling, and internal coordination. They operate quietly in the background, reducing friction and manual hand-offs. AI Agents are best used where consistency and logic matter more than speed alone. Think of them as reliable junior staff who never forget a step.' },
               { label: '', title: 'AI BOTS', sub: 'QUIET OPS', icon: Bot, offset: '-mt-2', desc: 'Placeholder text.' },
               { label: '', title: 'AI AUTOMATION', sub: 'ARCHITECTURE', icon: Settings, offset: '', desc: 'Placeholder text.' },
             ].map((card) => (
