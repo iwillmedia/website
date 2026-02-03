@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/tradies", "destination": "/tradies.html" }
+    { "source": "/tradies", "destination": "/tradies/index.html" }
   ]
 }
